@@ -16,21 +16,21 @@ env:
 
 jobs:
   # Check generated protos match their source repos (optional for PRs).
-  vet-proto:
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
+  #vet-proto:
+  #  runs-on: ubuntu-latest
+   # timeout-minutes: 20
+   # steps:
       # Setup the environment.
-      - name: Setup Go
-        uses: actions/setup-go@v2
-        with:
-          go-version: 1.15
-      - name: Checkout repo
-        uses: actions/checkout@v2
+   #   - name: Setup Go
+    #    uses: actions/setup-go@v2
+   #     with:
+    #      go-version: 1.15
+    #  - name: Checkout repo
+    #    uses: actions/checkout@v2
 
       # Run the vet checks.
-      - name: vet
-        run: ./vet.sh -install && ./vet.sh
+  #    - name: vet
+     #   run: ./vet.sh -install && ./vet.sh
 
   # Run the main gRPC-Go tests.
   tests:
